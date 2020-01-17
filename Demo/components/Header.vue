@@ -3,6 +3,7 @@
         <div class="header-brand">
             <router-link :to="'/'">
                 <f-icon :color="fColor" font-size="30" name="pl"></f-icon>
+                <f-icon style="margin-left: 7px" :color="fColor" font-size="20" name="table"></f-icon>
             </router-link>
         </div>
         <div class="header-nav">
@@ -76,6 +77,11 @@
         &-brand {
             cursor: pointer;
             float: left;
+          a{
+            display: inline-flex;
+            align-items: center;
+            vertical-align: center;
+          }
         }
 
         &-nav {

@@ -1,7 +1,7 @@
 <template>
   <div class="firm-main-card">
     <div class="description active" ref="description">
-      一个基于vue的表格插件
+      PL Table - 一个基于vue的表格插件
     </div>
     <div class="card-group">
       <cardCompass></cardCompass>
