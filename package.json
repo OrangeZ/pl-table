@@ -14,7 +14,7 @@
   "main": "lib/pl-table.common.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.demo.config.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "webpack --config build/webpack.demo.config.js",
     "lint": "eslint --ext .js,.vue src",
     "reinstall": "npm i --no-optional --registry=https://registry.npm.taobao.org"
   },
