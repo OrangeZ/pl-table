@@ -11,7 +11,7 @@ stripe | 是否为斑马纹 | boolean | false
 span-method | 合并行或列的计算方法 | Function | —
 show-summary | 是否需要合计 |  boolean  | false
 summary-method | 自定义的合计计算方法  | Function({ columns, data })	| —
-default-sort | 默认的排序列的 prop 和顺序。它的prop属性指定默认的排序的列，order指定默认排序的顺序 | Object | order: asc升序,desc降序
+default-sort | 默认的排序列的 field 和顺序。它的field属性指定默认的排序的列，order指定默认排序的顺序 | Object | order: asc升序,desc降序
 height-change | 是否开启表格高度随数据多少而变化，如数据少的时候，表格高度就变小 那你就改成true； 如你想要表格永远处于外层盒子多高，表格就多高 那你就改成 false， | Boolean | true
 row-class-name | 行的 className 的回调方法，也可以使用字符串为所有行设置一个固定的 className | Function({row, rowIndex})/String | -
 row-style | 行的 style 的回调方法 | Function({row, rowIndex})/Object | -
