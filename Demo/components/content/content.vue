@@ -9,6 +9,7 @@
       height: calc(100vh - 70px);
       overflow-x: hidden;
       overflow-y: auto;
+      scroll-behavior: smooth;
       &::-webkit-scrollbar{
         display: none;
       }
