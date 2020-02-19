@@ -14,12 +14,14 @@
             </router-link>
             <f-icon :color="fColor" name="right"></f-icon>
         </div>
+      <a href="https://github.com/livelyPeng/pl-table" target="_blank">
         <div :class="{'header-angle':atHome}">
-            <f-icon :color="fColor"
-                    font-size="35px"
-                    :class="atHome?'header-angle-icon-home':'header-angle-icon-other'" name="github1">
-            </f-icon>
+          <f-icon :color="fColor"
+                  font-size="35px"
+                  :class="atHome?'header-angle-icon-home':'header-angle-icon-other'" name="github1">
+          </f-icon>
         </div>
+      </a>
     </div>
 </template>
 

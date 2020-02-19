@@ -31,7 +31,12 @@
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
   }
 </style>

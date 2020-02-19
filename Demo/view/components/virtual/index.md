@@ -107,5 +107,40 @@
 ```
 :::
 
+## 测试1
+:::demo pl-table
+```html
+
+```
+:::
+
+## 测试2
+:::demo 支持五种类型的按钮，使用`dashed`、`type`、`round`、`plain`,`circle`为按钮添加固定样式
+```html
+
+```
+:::
+
+## 测试3
+:::demo 支持五种类型的按钮，使用`dashed`、`type`、`round`、`plain`,`circle`为按钮添加固定样式
+```html
+
+```
+:::
+
+## 测试4
+:::demo 支持五种类型的按钮，使用`dashed`、`type`、`round`、`plain`,`circle`为按钮添加固定样式
+```html
+
+```
+:::
+
+## 测试5
+:::demo 支持五种类型的按钮，使用`dashed`、`type`、`round`、`plain`,`circle`为按钮添加固定样式
+```html
+
+```
+:::
+
 
 
