@@ -11,7 +11,7 @@ stripe | 是否为斑马纹 | boolean | false
 span-method | 合并行或列的计算方法 | Function | —
 show-summary | 是否需要合计 |  boolean  | false
 summary-method | 自定义的合计计算方法  | Function({ columns, data })	| —
-default-sort | 默认的排序列的 field 和顺序。它的field属性指定默认的排序的列，order指定默认排序的顺序 | Object | order: asc升序,desc降序
+default-sort | 默认的排序列的 field和顺序。它的field属性指定默认的排序的列，order指定默认排序的顺序 | Object | order: asc升序,desc降序
 height-change | 是否开启表格高度随数据多少而变化，如数据少的时候，表格高度就变小 那你就改成true； 如你想要表格永远处于外层盒子多高，表格就多高 那你就改成 false， | Boolean | true
 row-class-name | 行的 className 的回调方法，也可以使用字符串为所有行设置一个固定的 className | Function({row, rowIndex})/String | -
 row-style | 行的 style 的回调方法 | Function({row, rowIndex})/Object | -
@@ -44,7 +44,7 @@ show-header-overflow | 设置表头所有内容过长时显示为省略号,建�
 @header-contextmenu	| 当某一列的表头被鼠标右键点击时触发该事件 | column, event
 @current-change	| 当表格的当前行发生变化的时候会触发该事件，如果要高亮当前行，请打开表格的 highlight-current-row 属性 |	currentRow, oldCurrentRow
 @row-click  | 当某一行被点击时会触发该事件  | row, column, event
-@header-dragend  | 当拖动表头改变了列的宽度的时候会触发该事件  | @header-dragend  | 当拖动表头改变了列的宽度的时候会触发该事件  | {$rowIndex, column, columnIndex, $columnIndex, fixed, isHidden}
+@header-dragend  | 当拖动表头改变了列的宽度的时候会触发该事件  | {$rowIndex, column, columnIndex, $columnIndex, fixed, isHidden}
 @table-body-scroll | 当表体滚动时触发，无论横向还是竖向， 你拿到了table实例，你可以写你自己的功能哦 |  table, event
 @sort-change | 当表格的排序条件发生变化的时候会触发该事件 | { column, prop, order }
 @filter-change | 当表格的筛选条件发生变化的时候会触发该事件，参数的值是一个对象，对象的 key 是 column 的 columnKey，对应的 value 为用户选择的筛选条件的数组。 | filters
@@ -66,7 +66,6 @@ clearSort | 用于清空排序条件，数据会恢复成未排序的状态 | --
 clearFilter | 不传入参数时用于清空所有过滤条件，数据会恢复成未过滤的状态，也可传入由columnKey组成的数组以清除指定列的过滤条件 | columnKey
 sort | 手动对 Table 进行排序。参数field属性指定排序列，order指定排序顺序。| 	field: string, order?: 'desc' ; 'asc'
 
-
 # plx-table-column Attributes
   **有关于pl-table-column更多配置具体请看element官方文档的table-column属性**
 
@@ -81,6 +80,23 @@ align | 对齐方式 / 可选值：left/center/right  | String | left
 header-align | 表头对齐方式，若不设置该项，则使用表格的对齐方式 / 可选值： left/center/right | String | —
 fixed | 将列固定在左侧或者右侧, 注意：与pl-table-column不同在于，不能直接写个fixed，而是写fixed = "left; right" | String | left"固定左侧", right"定右侧"
 
+# plx-table-column Slots 插槽
+属性  |  说明  |  类型  |  默认值
+:----------: | -------  |  :-------:  |  :-------:
+header | 自定义表头内容的模板 | - | {column,columnIndex,$columnIndex,$rowIndex}, h
+
+# 实例
+``` javascript
+<plx-table-column>
+  <template v-slot:header>
+     <span style="color: red;">这样玩也行</span>
+  </template>
+ <template v-slot:header="{ column }">
+    <span style="color: red">这样玩也行</span>
+ </template>
+</plx-table-column>
+```
+
 # Pagination Attributes（分页属性）
   **有关于Pagination分页配置具体请看element官方文档的Pagination**
 
@@ -93,6 +109,7 @@ pt-total | 数据总条数 | Number | 0
 page-size | 每页条数 | Number | 10
 current-page | 当前页 | Number | 1
 pagination-layout | 组件布局，子组件名用逗号分隔 | String | total, sizes, prev, pager, next, jumper
+
 
 
 # Pagination Events（分页的事件）
